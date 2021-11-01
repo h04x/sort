@@ -74,7 +74,6 @@ export function* comb(arr) {
     while (step >= 1) {
         for (let i = 0; i + step < arr.length; i++) {
             let step_r = Math.round(step);
-            //console.log(step, arr[step_r]);
             if (arr[i] > arr[i + step_r])            {
                 
                 arr.swap(i, i + step_r);

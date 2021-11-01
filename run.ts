@@ -35,7 +35,6 @@ HTMLDivElement.prototype.transform = function(box: Box) {
     this.style.top = box.y;
     this.style.width = box.w;
     this.style.height = box.h;
-    //console.log(box);
 }
 
 Array.prototype.swap = function(l: number, r: number) {
