@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+            table {
+                width: 100%;
+                height: 100%;
+                border-color:red;
+                border-style: solid;
+                position:absolute;
+            }
+        </style>        
+        
+        <script type="module">
+            import { run } from "./js/run.js"
+            document.addEventListener("DOMContentLoaded", function(event) { 
+                let canvas = document.getElementById("canvas");
+                
+                let canvas_resize = () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }
+
+                window.addEventListener("resize", canvas_resize);  
+
+                canvas_resize();
+                run(canvas); 
+            });
+
+        </script>
+    </head>
+</html>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
